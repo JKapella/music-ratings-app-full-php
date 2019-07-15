@@ -25,9 +25,9 @@ session_start();
 
 <form action="login.php">
     <label for="username">Username:</label>
-    <input id="username" type="text">
+    <input id="username" name="username" type="text">
     <label for="password">Password:</label>
-    <input id="password" type="text">
+    <input id="password" name="password" type="text">
     <input type="submit">
 </form>
 
