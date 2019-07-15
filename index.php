@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 //check if logged in
 
 //if logged in - go to the main page
@@ -20,6 +22,14 @@
 </head>
 
 <body>
+
+<form action="login.php">
+    <label for="username">Username:</label>
+    <input id="username" type="text">
+    <label for="password">Password:</label>
+    <input id="password" type="text">
+    <input type="submit">
+</form>
 
 </body>
 </html>
