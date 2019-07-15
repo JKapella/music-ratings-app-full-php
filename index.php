@@ -16,7 +16,7 @@ session_start();
     <meta charset="utf-8">
 
     <title>Music Ratings App</title>
-    <meta name="description" content="Keep track of your favourite music">
+    <meta name="description" content="Music Ratings App - Keep track of your favourite music">
     <meta name="author" content="JKapella">
 
 </head>
