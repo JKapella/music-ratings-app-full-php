@@ -1,3 +1,7 @@
 {
-    
+    "name": "Music Ratings App",
+    "description": "Music Ratings App - Keep track of your favourite music",
+    "autoload": {
+        "psr-4": {"MusicRatings\\": "src/"}
+      }  
 }
