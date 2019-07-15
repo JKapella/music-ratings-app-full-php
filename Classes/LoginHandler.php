@@ -1,6 +1,8 @@
 <?php
 
-Class LoginHandler 
+namespace MusicRatings;
+
+Class LoginHandler
 {
     
 }
