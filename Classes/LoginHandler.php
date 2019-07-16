@@ -10,4 +10,9 @@ Class LoginHandler
     {
         $this->db = $dbConnection;
     }
+
+    public function checkCredentials(string $username, string $password) 
+    {
+        
+    }
 }
