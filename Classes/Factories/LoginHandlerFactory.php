@@ -8,5 +8,6 @@ Class LoginHandlerFactory
     {
         $dbDetails = Config::getDbDetails();
         $dbConnection = new DbConnection($dbDetails);
+        return new LoginHandler($dbConnection);
     }
 }

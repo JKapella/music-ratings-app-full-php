@@ -4,8 +4,10 @@ namespace MusicRatings;
 
 Class LoginHandler
 {
-    public function __construct() 
-    {
+    private $db;
 
+    public function __construct(DbConnection $dbConnection) 
+    {
+        $this->db = $dbConnection;
     }
 }
