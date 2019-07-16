@@ -1,18 +1,26 @@
 <?php
 
-use MusicRatings\LoginHandlerFactory;
-
 require_once __DIR__ . '/vendor/autoload.php';
+
+use MusicRatings\Classes\Factories\LoginHandlerFactory;
+
+var_dump($_POST);
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $loginHandler = LoginHandlerFactory();
-    $loginHandler->checkCredentials($username, $password);
-
+    $loginHandler = LoginHandlerFactory::createLoginHandler();
+    $userVerified = $loginHandler->checkCredentials($username, $password);
+    if ($userVerified === true) {
+        echo 'Its Good!';
+    } else {
+        echo 'failed to verify credentials';
+        //header('Location: index.php');
+    }
 } else {
 
-    header('Location: index.php');
-    
+    echo 'failed to read post data';
+    //header('Location: index.php');
+
 };

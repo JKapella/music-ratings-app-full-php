@@ -4,7 +4,7 @@ namespace MusicRatings;
 
 Class LoginHandlerFactory 
 {
-    public static function __invoke()
+    public static function createLoginHandler()
     {
         $dbDetails = Config::getDbDetails();
         $dbConnection = new DbConnection($dbDetails);

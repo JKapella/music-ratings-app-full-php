@@ -1,5 +1,7 @@
 <?php 
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 session_start();
 
 //check if logged in
@@ -23,7 +25,7 @@ session_start();
 
 <body>
 
-<form action="login.php">
+<form action="login.php" method="post">
     <label for="username">Username:</label>
     <input id="username" name="username" type="text">
     <label for="password">Password:</label>
