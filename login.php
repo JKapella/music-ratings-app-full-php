@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+session_start();
+
 use MusicRatings\Classes\Factories\LoginHandlerFactory;
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -11,14 +13,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $loginHandler = LoginHandlerFactory::createLoginHandler();
     $userVerified = $loginHandler->checkCredentials($username, $password);
     if ($userVerified === true) {
-        echo 'Its Good!';
+        header('Location: app.php');
+        $_SESSION['loggedIn'] = true;
     } else {
-        echo 'failed to verify credentials';
-        //header('Location: index.php');
+        header('Location: index.php');
     }
 } else {
-
-    echo 'failed to read post data';
-    //header('Location: index.php');
-
+    header('Location: index.php');
 };

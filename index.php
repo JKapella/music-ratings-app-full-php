@@ -4,9 +4,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
-//check if logged in
-
-//if logged in - go to the main page
+if (isset($_SESSION['loggedIn'])) {
+    header('Location: app.php');
+}
 
 
 ?>
