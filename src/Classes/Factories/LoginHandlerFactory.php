@@ -3,6 +3,8 @@
 namespace MusicRatings\Classes\Factories;
 
 use MusicRatings\Classes\DbConnection;
+use MusicRatings\Config;
+use MusicRatings\Classes\LoginHandler;
 
 Class LoginHandlerFactory 
 {

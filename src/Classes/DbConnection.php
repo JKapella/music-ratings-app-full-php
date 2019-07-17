@@ -6,7 +6,7 @@ Class DbConnection
 {
     private $dbConnection;
 
-    public function __construct(PDO $dbConnection)
+    public function __construct(\PDO $dbConnection)
     {
         $this->dbConnection = $dbConnection;
     }
