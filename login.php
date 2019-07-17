@@ -4,8 +4,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use MusicRatings\Classes\Factories\LoginHandlerFactory;
 
-var_dump($_POST);
-
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST['username'];

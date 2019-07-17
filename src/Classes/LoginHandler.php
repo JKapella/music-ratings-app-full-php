@@ -18,8 +18,7 @@ Class LoginHandler
         $query = $db->prepare("SELECT `password` FROM `users` WHERE `username` = :username;");
         $query->bindParam(':username', $username);
         if ($query->execute() === true) {
-            $storedPassword = $query->fetch();
-            var_dump($storedPassword);
+            $storedPassword = $query->fetch()['password'];
             $success = password_verify($password, $storedPassword);
         }
         return $success;
