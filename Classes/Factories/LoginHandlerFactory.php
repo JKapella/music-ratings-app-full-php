@@ -1,6 +1,8 @@
 <?php
 
-namespace MusicRatings;
+namespace MusicRatings\Classes\Factories;
+
+use MusicRatings\Classes\DbConnection;
 
 Class LoginHandlerFactory 
 {

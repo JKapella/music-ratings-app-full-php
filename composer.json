@@ -1,7 +1,9 @@
 {
-    "name": "Music Ratings App",
+    "name": "kapella/music-ratings-app",
     "description": "Music Ratings App - Keep track of your favourite music",
     "autoload": {
-        "psr-4": {"MusicRatings\\": "src/"}
+        "psr-4": {
+          "MusicRatings\\": ["src/"]
+        }
       }  
 }

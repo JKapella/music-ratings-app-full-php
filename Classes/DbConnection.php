@@ -1,6 +1,6 @@
 <?php
 
-namespace MusicRatings;
+namespace MusicRatings\Classes;
 
 Class DbConnection 
 {
