@@ -27,10 +27,13 @@ $albums = $albumHandler->getAllAlbums();
     <meta name="description" content="Music Ratings App - Keep track of your favourite music">
     <meta name="author" content="JKapella">
     <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" href="public/normalize.css">
 
 </head>
 
 <body>
+
+<h1>Music Ratings App</h1>
 
 <?php 
     if (isset($albums)) {
