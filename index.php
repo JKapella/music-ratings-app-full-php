@@ -8,7 +8,6 @@ if (isset($_SESSION['loggedIn'])) {
     header('Location: app.php');
 }
 
-
 ?>
 
 <!doctype html>
