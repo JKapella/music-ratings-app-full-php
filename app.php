@@ -8,6 +8,8 @@ if (!isset($_SESSION['loggedIn'])) {
     header('Location: index.php');
 }
 
+//get the stuff from the database
+
 ?>
 
 <!doctype html>
