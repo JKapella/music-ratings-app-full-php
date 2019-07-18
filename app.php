@@ -33,13 +33,16 @@ $albums = $albumHandler->getAllAlbums();
 
 <body>
 
-<h1>Music Ratings App</h1>
+<div class="page-container">
+    <h1>Music Ratings App</h1>
 
-<?php 
-    if (isset($albums)) {
-        echo AlbumsViewHelper::printAllAlbums($albums);
-    } 
-?>
+    <?php 
+        if (isset($albums)) {
+            echo AlbumsViewHelper::printAllAlbums($albums);
+        } 
+    ?>
+</div>
+
 
 </body>
 </html>
