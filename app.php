@@ -14,6 +14,8 @@ if (!isset($_SESSION['loggedIn'])) {
 $albumHandler = AlbumHandlerFactory::createAlbumHandler();
 $albums = $albumHandler->getAllAlbums();
 
+var_dump($albums);
+
 ?>
 
 <!doctype html>
@@ -29,6 +31,8 @@ $albums = $albumHandler->getAllAlbums();
 </head>
 
 <body>
+
+
 
 </body>
 </html>

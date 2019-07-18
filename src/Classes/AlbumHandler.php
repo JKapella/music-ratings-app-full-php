@@ -16,7 +16,7 @@ class AlbumHandler
         $db = $this->db->getDbConnection();
         $query = $db->prepare("SELECT * FROM `albums`;");
         $query->execute();
-        $albums = $query->fetchAll(PDO::FETCH_CLASS, "Album");
+        $albums = $query->fetchAll(\PDO::FETCH_CLASS, "MusicRatings\Classes\Album");
         return $albums;
     }
 }
