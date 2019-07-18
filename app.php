@@ -2,13 +2,17 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+use MusicRatings\Classes\Factories\AlbumHandlerFactory;
+use MusicRatings\Classes\AlbumHandler;
+
 session_start();
 
 if (!isset($_SESSION['loggedIn'])) {
     header('Location: index.php');
 }
 
-//get the stuff from the database
+$albumHandler = AlbumHandlerFactory::createAlbumHandler();
+$albums = $albumHandler->getAllAlbums();
 
 ?>
 
