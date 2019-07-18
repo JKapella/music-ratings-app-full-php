@@ -8,11 +8,12 @@ class AlbumsViewHelper
     {
         $html = "";
         foreach ($albums as $album) {
-            $html .= "
-            <div class='entry-container'>
-                $album
-            </div>
-            ";
+            $properties = $album->getProperties();
+            $html .= "<div class='entry-container'>";
+            foreach($properties as $field => $value) {
+                $html .= "$field: $value,";
+            }    
+            $html .= "</div>";
         }
         return $html;
     }
