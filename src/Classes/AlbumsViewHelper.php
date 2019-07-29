@@ -11,7 +11,8 @@ class AlbumsViewHelper
             $properties = $album->getProperties();
             $html .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
             <h3>" . $properties['artist'] . " - 
-            <em>" . $properties['release'] . "</em>";
+            <em>" . $properties['release'] . "</em>
+             - " . $properties['year'];
             if ($properties['format'] != "") {
                 $html .= " (" . $properties['format'] . ")";
             }
@@ -19,7 +20,6 @@ class AlbumsViewHelper
             
             $html .= "<td>" . $properties['genre'] . "</td>
             <td>" . $properties['other_genre'] . "</td>
-            <td>" . $properties['year'] . "</td>
             <td>" . $properties['rating'] . "</td>
             <td></td>   
             </div>";
