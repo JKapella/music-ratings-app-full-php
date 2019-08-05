@@ -23,11 +23,9 @@ class AlbumsViewHelper
                 }
                 $unlistenedHtml .= "</h3><h3>";
                 $unlistenedHtml .= $properties['genre'] . " " . $properties['other_genre'] . "</h3></div>"
-                . "<div class='select-entry'>Edit</div>
-                <div class='rating'>" . $properties['rating'] . "</div>";
+                . "<div class='select-entry'>Edit</div>";
                 $unlistenedHtml .= "</div>";
             } else {
-
                 $listenedHtml .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
                 <div class='album-details'>
                 <h3>" . $properties['artist'] . " - 
