@@ -35,7 +35,8 @@ $albums = $albumHandler->getAllAlbums();
 
 <div class="page-container">
     <h1>Music Ratings App</h1>
-    
+    <button>Listened</button>
+    <button>Unlistened</button>
     <?php 
         if (isset($albums)) {
             echo AlbumsViewHelper::printAllAlbums($albums);

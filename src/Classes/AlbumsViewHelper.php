@@ -7,8 +7,8 @@ class AlbumsViewHelper
     public static function printAllAlbums(array $albums) 
     {
         $html = "";
-        $listenedHtml = "<h2>Listened</h2>";
-        $unlistenedHtml = "<h2>Unlistened</h2>";
+        $listenedHtml = "<div><h2>Listened</h2>";
+        $unlistenedHtml = "<div><h2>Unlistened</h2>";
         foreach ($albums as $album) {
             $properties = $album->getProperties();
 
@@ -37,8 +37,8 @@ class AlbumsViewHelper
                 $listenedHtml .= "</h3></div>";
             }
         }
-        $html .= $listenedHtml;
-        $html .= $unlistenedHtml;
+        $html .= $listenedHtml . "</div>";
+        $html .= $unlistenedHtml . "</div>";
         return $html;
     }
 }
