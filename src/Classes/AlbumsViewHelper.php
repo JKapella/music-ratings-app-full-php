@@ -14,6 +14,7 @@ class AlbumsViewHelper
 
             if ($properties['listened'] != 'Yes') {
                 $unlistenedHtml .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
+                <div class='album-details'>
                 <h3>" . $properties['artist'] . " - 
                 <em>" . $properties['release'] . "</em>
                 - " . $properties['year'];
@@ -21,11 +22,14 @@ class AlbumsViewHelper
                     $unlistenedHtml .= " (" . $properties['format'] . ")";
                 }
                 $unlistenedHtml .= "</h3><h3>";
-                $unlistenedHtml .= $properties['genre'] .  $properties['other_genre'] . $properties['rating'];
-                $unlistenedHtml .= "</h3></div>";
+                $unlistenedHtml .= $properties['genre'] . " " . $properties['other_genre'] . "</h3></div>"
+                . "<div class='select-entry'>Edit</div>
+                <div class='rating'>" . $properties['rating'] . "</div>";
+                $unlistenedHtml .= "</div>";
             } else {
 
                 $listenedHtml .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
+                <div class='album-details'>
                 <h3>" . $properties['artist'] . " - 
                 <em>" . $properties['release'] . "</em>
                 - " . $properties['year'];
@@ -33,8 +37,10 @@ class AlbumsViewHelper
                     $listenedHtml .= " (" . $properties['format'] . ")";
                 }
                 $listenedHtml .= "</h3><h3>";
-                $listenedHtml .= $properties['genre'] .  $properties['other_genre'] . $properties['rating'];
-                $listenedHtml .= "</h3></div>";
+                $listenedHtml .= $properties['genre'] . " " . $properties['other_genre'] . "</h3></div>"
+                . "<div class='select-entry'>Edit</div>
+                <div class='rating'>" . $properties['rating'] . "</div>";
+                $listenedHtml .= "</div>";
             }
         }
         $html .= $listenedHtml . "</div>";
