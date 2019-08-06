@@ -28,6 +28,7 @@ $albums = $albumHandler->getAllAlbums();
     <meta name="author" content="JKapella">
     <link rel="stylesheet" href="public/styles.css">
     <link rel="stylesheet" href="public/normalize.css">
+    <script defer src="public/app.js"></script>
 
 </head>
 

@@ -8,12 +8,12 @@ class AlbumsViewHelper
     {
         $html = "";
         $listenedHtml = "<div><h2>Listened</h2>";
-        $unlistenedHtml = "<div><h2>Unlistened</h2>";
+        $unlistenedHtml = "<div><h2 class='hidden'>Unlistened</h2>";
         foreach ($albums as $album) {
             $properties = $album->getProperties();
 
             if ($properties['listened'] != 'Yes') {
-                $unlistenedHtml .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
+                $unlistenedHtml .= "  <div class='entry-container hidden' data-listened='no' data-id='" . $properties['id'] . "'>
                 <div class='album-details'>
                 <h3>" . $properties['artist'] . " - 
                 <em>" . $properties['release'] . "</em>
@@ -26,7 +26,7 @@ class AlbumsViewHelper
                 . "<div class='select-entry'>Edit</div>";
                 $unlistenedHtml .= "</div>";
             } else {
-                $listenedHtml .= "  <div class='entry-container' data-id='" . $properties['id'] . "'>
+                $listenedHtml .= "  <div class='entry-container visible' data-listened='yes' data-id='" . $properties['id'] . "'>
                 <div class='album-details'>
                 <h3>" . $properties['artist'] . " - 
                 <em>" . $properties['release'] . "</em>
