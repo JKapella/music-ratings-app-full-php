@@ -7,14 +7,27 @@ function setUpButtonFunctionality() {
 }
 
 function switchToListenedEntries() {
-    let entries = document.getElementsByClassName('entry-container')
-    entries.array.forEach(element => {
-        
+    let entries = document.querySelectorAll('.entry-container')
+    entries.forEach(element => {
+        element.classList.remove('visible', 'hidden');
+        if (element.dataset.listened === 'yes') {
+            element.classList.add('visible');
+        } else {
+            element.classList.add('hidden');
+        }
     })
 }
 
 function switchToUnistenedEntries() {
-
+    let entries = document.querySelectorAll('.entry-container')
+    entries.forEach(element => {
+        element.classList.remove('visible', 'hidden');
+        if (element.dataset.listened === 'no') {
+            element.classList.add('visible');
+        } else {
+            element.classList.add('hidden');
+        }
+    })
 }
 
 setUpButtonFunctionality();
