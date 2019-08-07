@@ -7,8 +7,8 @@ class AlbumsViewHelper
     public static function printAllAlbums(array $albums) 
     {
         $html = "";
-        $listenedHtml = "<div><h2>Listened</h2>";
-        $unlistenedHtml = "<div><h2 class='hidden'>Unlistened</h2>";
+        $listenedHtml = "<div>";
+        $unlistenedHtml = "<div>";
         foreach ($albums as $album) {
             $properties = $album->getProperties();
 

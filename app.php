@@ -36,10 +36,10 @@ $albums = $albumHandler->getAllAlbums();
 
 <div class="page-container">
     <h1>Music Ratings App</h1>
-    <button>Listened</button>
-    <button>Unlistened</button>
-    <button>New Entry</button>
-    <button>Next up!</button>
+    <button id='listenedButton'>Listened</button>
+    <button id='unlistenedButton'>Unlistened</button>
+    <button id='newEntryButton'>New Entry</button>
+    <button id='nextupButton'>Next up!</button>
     <?php 
         if (isset($albums)) {
             echo AlbumsViewHelper::printAllAlbums($albums);
