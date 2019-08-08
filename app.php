@@ -45,6 +45,26 @@ $albums = $albumHandler->getAllAlbums();
             echo AlbumsViewHelper::printAllAlbums($albums);
         } 
     ?>
+    <div id='newEntry' class="new-entry-container hidden">
+        <form>
+            <input type="text" name='artist'>
+            <input type="text" name='release'>
+            <input type="text" name='genre'>
+            <input type="text" name='other_genre'>
+            <select name='format'>
+                <option value=""></option>    
+                <option value="EP">EP</option>
+                <option value="LP">LP</option>
+                <option value="Single">Single</option>
+            </select>
+            <input type="text" name='year'>
+            <select name='listened'>
+                <option value="No">No</option>    
+                <option value="Yes">EP</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
 </div>
 
 

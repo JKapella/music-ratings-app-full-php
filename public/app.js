@@ -1,4 +1,5 @@
 function setUpButtonFunctionality() {
+
     let listenedButton = document.getElementById('listenedButton')
     listenedButton.addEventListener('click', switchToListenedEntries)
 
@@ -7,6 +8,7 @@ function setUpButtonFunctionality() {
 
     let newEntryButton = document.getElementById('newEntryButton')
     newEntryButton.addEventListener('click', switchToNewEntry)
+
 }
 
 function switchToListenedEntries() {
@@ -35,10 +37,14 @@ function switchToUnistenedEntries() {
 
 function switchToNewEntry() {
     let entries = document.querySelectorAll('.entry-container')
+    let newEntry = document.getElementById('newEntry')
     entries.forEach(element => {
         element.classList.remove('visible', 'hidden')
         element.classList.add('hidden')
     })
+    newEntry.classList.remove('visible', 'hidden')
+    newEntry.classList.add('visible')
 }
 
 setUpButtonFunctionality()
+console.log('is this even fucking working')
