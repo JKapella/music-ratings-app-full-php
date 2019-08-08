@@ -46,21 +46,29 @@ $albums = $albumHandler->getAllAlbums();
         } 
     ?>
     <div id='newEntry' class="new-entry-container hidden">
+        <h3>Create New Entry</h3>
         <form>
-            <input type="text" name='artist'>
-            <input type="text" name='release'>
-            <input type="text" name='genre'>
-            <input type="text" name='other_genre'>
-            <select name='format'>
+            <label for="artist">Artist:</label>
+            <input id='artist' type="text" name='artist'>
+            <label for="release">Release:</label>
+            <input id='release' type="text" name='release'>
+            <label for="genre">Genre:</label>
+            <input id='genre' type="text" name='genre'>
+            <label for="other_genre">Alt-Genre:</label>
+            <input id='other_genre' type="text" name='other_genre'>
+            <label for="format">Format:</label>
+            <select id='format' name='format'>
                 <option value=""></option>    
                 <option value="EP">EP</option>
                 <option value="LP">LP</option>
                 <option value="Single">Single</option>
             </select>
-            <input type="text" name='year'>
-            <select name='listened'>
+            <label for="year">Year:</label>
+            <input id='year' type="text" name='year'>
+            <label for="listened">Listened:</label>
+            <select id='listened' name='listened'>
                 <option value="No">No</option>    
-                <option value="Yes">EP</option>
+                <option value="Yes">Yes</option>
             </select>
             <input type="submit">
         </form>
