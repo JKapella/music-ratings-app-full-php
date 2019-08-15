@@ -8,6 +8,9 @@ function setUpButtonFunctionality() {
 
     let newEntryButton = document.getElementById('newEntryButton')
     newEntryButton.addEventListener('click', switchToNewEntry)
+
+    let submitNewEntryButton = document.getElementById('submitNewEntryButton')
+    submitNewEntryButton.addEventListener('click', submitNewEntry)
 }
 
 function switchToListenedEntries() {
@@ -49,6 +52,11 @@ function switchToNewEntry() {
     })
     newEntry.classList.remove('visible', 'hidden')
     newEntry.classList.add('visible')
+}
+
+function submitNewEntry(e) {
+    e.preventDefault()
+    
 }
 
 setUpButtonFunctionality()

@@ -86,7 +86,7 @@ $albums = $albumHandler->getAllAlbums();
             </select>
             <label for="notes">Notes:</label>
             <input id='notes' class="form-element" type="text" name='notes'>
-            <input class="form-element" type="submit">
+            <input id='submitNewEntryButton' class="form-element" type="submit">
         </form>
     </div>
 </div>
