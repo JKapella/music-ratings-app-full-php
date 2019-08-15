@@ -49,28 +49,44 @@ $albums = $albumHandler->getAllAlbums();
         <h3>Create New Entry</h3>
         <form>
             <label for="artist">Artist:</label>
-            <input id='artist' type="text" name='artist'>
+            <input id='artist' class="form-element" type="text" name='artist'>
             <label for="release">Release:</label>
-            <input id='release' type="text" name='release'>
+            <input id='release' class="form-element" type="text" name='release'>
             <label for="genre">Genre:</label>
-            <input id='genre' type="text" name='genre'>
+            <input id='genre' class="form-element" type="text" name='genre'>
             <label for="other_genre">Alt-Genre:</label>
-            <input id='other_genre' type="text" name='other_genre'>
+            <input id='other_genre' class="form-element" type="text" name='other_genre'>
             <label for="format">Format:</label>
-            <select id='format' name='format'>
+            <select id='format' class="form-element" name='format'>
                 <option value=""></option>    
                 <option value="EP">EP</option>
                 <option value="LP">LP</option>
                 <option value="Single">Single</option>
             </select>
             <label for="year">Year:</label>
-            <input id='year' type="text" name='year'>
+            <input id='year' class="form-element" type="text" name='year'>
             <label for="listened">Listened:</label>
-            <select id='listened' name='listened'>
+            <select id='listened' class="form-element" name='listened'>
                 <option value="No">No</option>    
                 <option value="Yes">Yes</option>
             </select>
-            <input type="submit">
+            <label for="rating">Rating:</label>
+            <select id='rating' class="form-element" name='rating'>
+                <option value="0">0</option>    
+                <option value="0.5">0.5</option>
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="3.5">3.5</option>
+                <option value="4">4</option>
+                <option value="4.5">4.5</option>
+                <option value="5">5</option>
+            </select>
+            <label for="notes">Notes:</label>
+            <input id='notes' class="form-element" type="text" name='notes'>
+            <input class="form-element" type="submit">
         </form>
     </div>
 </div>

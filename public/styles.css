@@ -51,3 +51,7 @@ h1 {
 .visible {
     display: block;
 }
+
+.form-element {
+    display: block;
+}

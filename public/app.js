@@ -8,11 +8,11 @@ function setUpButtonFunctionality() {
 
     let newEntryButton = document.getElementById('newEntryButton')
     newEntryButton.addEventListener('click', switchToNewEntry)
-
 }
 
 function switchToListenedEntries() {
     let entries = document.querySelectorAll('.entry-container')
+    let newEntry = document.getElementById('newEntry')
     entries.forEach(element => {
         element.classList.remove('visible', 'hidden')
         if (element.dataset.listened === 'yes') {
@@ -21,10 +21,13 @@ function switchToListenedEntries() {
             element.classList.add('hidden')
         }
     })
+    newEntry.classList.remove('visible', 'hidden')
+    newEntry.classList.add('hidden')
 }
 
 function switchToUnistenedEntries() {
     let entries = document.querySelectorAll('.entry-container')
+    let newEntry = document.getElementById('newEntry')
     entries.forEach(element => {
         element.classList.remove('visible', 'hidden')
         if (element.dataset.listened === 'no') {
@@ -33,6 +36,8 @@ function switchToUnistenedEntries() {
             element.classList.add('hidden')
         }
     })
+    newEntry.classList.remove('visible', 'hidden')
+    newEntry.classList.add('hidden')
 }
 
 function switchToNewEntry() {
@@ -47,4 +52,3 @@ function switchToNewEntry() {
 }
 
 setUpButtonFunctionality()
-console.log('is this even fucking working')
