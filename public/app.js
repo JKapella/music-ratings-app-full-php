@@ -56,7 +56,11 @@ function switchToNewEntry() {
 
 function submitNewEntry(e) {
     e.preventDefault()
-    
+    let formElements = document.querySelectorAll('.form-element')
+
+    //validation on elements!
+    //some sort of error messages!
+    //submit the thing!
 }
 
 setUpButtonFunctionality()
