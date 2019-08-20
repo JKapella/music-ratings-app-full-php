@@ -61,32 +61,45 @@ function submitNewEntry(e) {
     let validatedEntries = validateNewEntry(formElements);
 
     if (validatedEntries != '') {
+        
+        //display the error message!
+
+    } else {
+        
+
         //it's good!
         //submit the entries!
         //clear error messages
         //confirm the entry has been submitted
-    } else {
-        //display the error message!
     }
 }
 
 function validateNewEntry(formToValidate) {
     
+    let errorMessage = ''
     let formEmpty = true
+    let formTooLong = false
 
     formToValidate.forEach((formItem) => {
 
-        if (formItem.value != '') {
-            formEmpty = false
+        if (formItem.name === 'artist' || formItem.name === 'release') {
+            if (formItem.value != '') {
+                formEmpty = false
+            }
+        }
+        if (formItem.value.length >= 500) {
+            formTooLong = true
         }
     })
 
     if (formEmpty) {
-        console.log('The Form Is Empty!')
-        //return error message - you need to put something in the form!
+        errorMessage += '\n Must include either an artist or a release!'
+    }
+    if (formTooLong) {
+        errorMessage += '\n Values can\'t be longer than 500 characters!'
     }
 
-    console.log(formEmpty)
+    return errorMessage
 }
 
 setUpButtonFunctionality()
