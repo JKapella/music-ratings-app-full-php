@@ -61,14 +61,14 @@ function submitNewEntry(e) {
     let returnedErrors = validateNewEntry(formElements);
 
     if (returnedErrors != '') {
-        displayNewEntryErrorMessage(returnedErrors)
+
+        updatenewEntryErrorMessage(returnedErrors)
+
     } else {
         
+        updatenewEntryErrorMessage(returnedErrors)
 
-        //it's good!
-        //submit the entries!
-        //clear error messages
-        //confirm the entry has been submitted
+        let newEntryForm = document.getElementById('newEntryForm').submit()
     }
 }
 
@@ -100,7 +100,7 @@ function validateNewEntry(formToValidate) {
     return errorMessage
 }
 
-function displayNewEntryErrorMessage(returnedErrors) {
+function updatenewEntryErrorMessage(returnedErrors) {
     let errorArea = document.getElementById('errorArea')
     errorArea.textContent = returnedErrors
 }

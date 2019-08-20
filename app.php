@@ -47,7 +47,7 @@ $albums = $albumHandler->getAllAlbums();
     ?>
     <div id='newEntry' class="new-entry-container hidden">
         <h3>Create New Entry</h3>
-        <form>
+        <form id='newEntryForm' action="submitNewEntry.php" method="post">
             <label for="artist">Artist:</label>
             <input id='artist' class="form-element" type="text" name='artist'>
             <label for="release">Release:</label>
