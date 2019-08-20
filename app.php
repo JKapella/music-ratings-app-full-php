@@ -88,6 +88,7 @@ $albums = $albumHandler->getAllAlbums();
             <input id='notes' class="form-element" type="text" name='notes'>
             <input id='submitNewEntryButton' class="form-element" type="submit">
         </form>
+        <div id='errorArea'></div>
     </div>
 </div>
 

@@ -58,12 +58,10 @@ function submitNewEntry(e) {
     e.preventDefault()
     let formElements = document.querySelectorAll('.form-element')
 
-    let validatedEntries = validateNewEntry(formElements);
+    let returnedErrors = validateNewEntry(formElements);
 
-    if (validatedEntries != '') {
-        
-        //display the error message!
-
+    if (returnedErrors != '') {
+        displayNewEntryErrorMessage(returnedErrors)
     } else {
         
 
@@ -93,13 +91,18 @@ function validateNewEntry(formToValidate) {
     })
 
     if (formEmpty) {
-        errorMessage += '\n Must include either an artist or a release!'
+        errorMessage += 'Must include either an artist or a release!'
     }
     if (formTooLong) {
-        errorMessage += '\n Values can\'t be longer than 500 characters!'
+        errorMessage += 'Values can\'t be longer than 500 characters!'
     }
 
     return errorMessage
+}
+
+function displayNewEntryErrorMessage(returnedErrors) {
+    let errorArea = document.getElementById('errorArea')
+    errorArea.textContent = returnedErrors
 }
 
 setUpButtonFunctionality()
