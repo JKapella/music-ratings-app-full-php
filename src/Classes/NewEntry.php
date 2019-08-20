@@ -17,6 +17,6 @@ Class NewEntry
 
     public function __construct(array $newEntryDetails)
     {
-        
+        //assign items from new entry details to properties on the class!
     }
 }

@@ -10,6 +10,8 @@ if (!isset($_SESSION['loggedIn'])) {
     header('Location: index.php');
 }
 
+//need to move stuff from POST data to the newentry fields - as an associative array
+
 $newEntryFields = [];
 
 $newEntry = new NewEntry(newEntryFields);
